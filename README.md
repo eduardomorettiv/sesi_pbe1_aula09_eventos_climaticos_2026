@@ -17,6 +17,8 @@ Desenvolver back-end com routes + banco de dados SQL
 ## Instruções para testar
 
 ## Prints com thunder client
+
+### Usuarios
 Listar usuários com **/usuarios** (get)
 ![usuario_listar](./docs/usuarios/usuarios%20listar.png)
 
@@ -29,6 +31,7 @@ Alterar usuário com **/usuarios/id** no **body** (put)
 Excluir usuário com **/usuarios/id** (delete)
 ![usuario_cadastrar](./docs/usuarios/usuarios%20cadastrar.png)
 
+### Eventos
 Listar eventos com **/eventos** (get)
 ![eventos_listar](./docs/eventos/eventos%20listar.png)
 
