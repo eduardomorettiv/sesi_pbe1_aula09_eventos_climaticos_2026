@@ -1,6 +1,7 @@
 drop database if exists registros_climaticos;
 create database registros_climaticos;
 use registros_climaticos;
+
 -- DDL para criar as tabelas do banco de dados
 create table usuario (
     id int not null auto_increment primary key,
