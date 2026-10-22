@@ -65,9 +65,27 @@ const excluir = (req, res) => {
     })
 }
 
+const login=(req,res)=>{
+    const {email, senha}=req.body
+    const query='SELECT id, nome, email FROM usuario WHERE email=?, senha=password(?);'
+    con.query(query, [email, senha], (err, results)=>{
+        if(err) {
+            console.error(err)
+            res.status(500).json({error: 'erro ao encontrar usuario' })
+        } else {
+            if (results.lenght == 0) {
+                res.status(404).json("Acesso negado, credenciais inválidas")
+            }else{
+                res.json(results)
+            }
+        }
+    })
+}
+
 module.exports = {
     listar,
     cadastrar,
     alterar,
-    excluir
+    excluir,
+    login
 }

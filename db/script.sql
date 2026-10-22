@@ -21,7 +21,7 @@ create table evento (
 );
 
 alter table evento add
-constraint fk_registra foreign key (usuarioId) references usuario(id);
+constraint fk_registra foreign key (usuarioId) references usuario(id) on delete cascade;
 
 -- DML para inserir dados de exemplo nas tabelas
 insert into usuario (nome, email, senha) values
